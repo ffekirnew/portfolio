@@ -1,0 +1,24 @@
+@import "src/styles.scss";
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    padding: 1rem;
+    margin: 0 1%;
+    border: $bw--thin solid $clr--primary;
+    border-radius: 100%;
+
+    &__icon {
+        color: $clr--primary;
+        font-size: $fs--small;
+
+        &:hover {
+            color: $clr-accent--primary;
+        }
+    }
+  }
+}

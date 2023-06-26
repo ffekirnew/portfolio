@@ -1,0 +1,18 @@
+@import "src/styles.scss";
+
+.info-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: $bw--thick solid $clr--primary;
+  border-radius: 20px;
+
+  &__links {
+    width: 100%;
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,34 @@
+@import "src/styles.scss";
+
+.home-page {
+  background: $clr-background--primary;
+  color: $clr--primary;
+
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  &__info-card {
+    width: 30%;
+    padding: 1rem;
+  }
+
+  &__main-content {
+    width: 60%;
+    min-height: 100%;
+    overflow: scroll;
+  }
+
+  &__navigation-sidebar {
+    width: 10%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

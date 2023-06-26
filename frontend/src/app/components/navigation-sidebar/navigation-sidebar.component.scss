@@ -1,0 +1,45 @@
+@import "src/styles.scss";
+
+.navigation-sidebar {
+  width: 100%;
+  height: 100%;
+
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // Draw an oval border
+  border: $bw--thin solid $clr--primary;
+  border-radius: 50% / 10%;
+
+
+  &__link {
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: $clr--primary;
+
+    border-radius: 10%;
+
+    &active {
+      color: $clr-accent--secondary;
+      background: $clr-background--secondary;
+    }
+
+    &__icon {
+      color: $clr--primary;
+      font-size: $fs--small;
+
+      &:hover {
+        color: $clr-accent--primary;
+      }
+    }
+  }
+}

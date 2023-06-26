@@ -1,0 +1,7 @@
+<div class="links">
+    <div class="links__link" *ngFor="let link of links">
+        <a [href]="link.url">
+            <fa-icon class="links__link__icon" [icon]="link.icon"></fa-icon>
+        </a>
+    </div>
+</div>
