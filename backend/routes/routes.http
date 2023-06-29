@@ -1,0 +1,12 @@
+### GET All Blogs
+GET localhost:3000/blogs
+
+### POST A New Blog
+POST localhost:3000/blogs
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Hello",
+"content": "Hopefully, this works"
+}

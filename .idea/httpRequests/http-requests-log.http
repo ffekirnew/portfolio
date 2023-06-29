@@ -1,0 +1,156 @@
+GET http://localhost:3000/blogs
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-29T214826.200.json
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Hello",
+"content": "Hopefully, this works"
+}
+
+<> 2023-06-29T214632.201.json
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Hello",
+"content": "Hopefully, this works"
+}
+
+<> 2023-06-29T214503.201.json
+
+###
+
+GET http://localhost:3000/blogs
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-29T214421.200.json
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Hello",
+"content": "Hopefully, this works"
+}
+
+<> 2023-06-29T213052.201.json
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Hello",
+"content": "Hopefully, this works"
+}
+
+<> 2023-06-29T212817.201.json
+
+###
+
+GET http://localhost:3000/blogs
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-29T212806.200.json
+
+###
+
+GET http://localhost:3000/blogs
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-29T212801.200.json
+
+###
+
+GET http://localhost:3000/blogs
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-29T212753.200.json
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Hello",
+"content": "Hopefully, this works"
+}
+
+<> 2023-06-29T212748.201.json
+
+###
+
+POST http://localhost:3000/blogs
+Content-Type: application/json
+Content-Length: 58
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "title": "Hello",
+"Hopefully, this works"
+}
+
+<> 2023-06-29T212729.400.html
+
+###
+
+GET http://localhost:3000/blogs
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-29T212549.200.json
+
+###
+
