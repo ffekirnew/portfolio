@@ -1,14 +1,10 @@
 const mongoose = require("mongoose");
 
-const blogSchema = new mongoose.Schema({
+const reportSchema = new mongoose.Schema({
     id: {
         type: Number,
         required: true,
         unique: true
-    },
-    author: {
-        type: String,
-        required: true,
     },
     title: {
         type: String,
@@ -38,4 +34,4 @@ const blogSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model("Blog", blogSchema);
+module.exports = mongoose.model("Report", reportSchema);

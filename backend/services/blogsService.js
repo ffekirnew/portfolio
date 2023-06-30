@@ -2,9 +2,10 @@ const Blog = require("../models/Blog");
 
 exports.getAllBlogs = async () => {
     try {
-        return await Blog.find();
+        const blogs =  await Blog.find();
+        console.log(blogs);
+        return blogs;
     } catch (error) {
-      console.error('here', error);
         throw new Error(error);
     }
 }
@@ -17,10 +18,16 @@ exports.getBlogById = async (id) => {
     }
 }
 
-exports.createBlog = async (newBlog) => {
+exports.createBlog = async (user, newBlog) => {
     try {
-        console.log('new blog', newBlog);
-        await Blog.create(newBlog);
+        await Blog.create({
+            id: newBlog.id,
+            title: newBlog.title,
+            content: newBlog.content,
+            author: user.username,
+            status: newBlog.status,
+            category: newBlog.category
+        });
         console.log(newBlog);
         return newBlog;
     } catch (error) {
@@ -51,6 +58,28 @@ exports.deleteBlog = async (id) => {
 exports.searchBlogs = async (searchQuery) => {
     try {
         return await Blog.find({$text: {$search: searchQuery}});
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+exports.changeStatus = async (id, status) => {
+    try {
+        const blog = await Blog.find({id: id});
+        blog.status = status;
+
+        return await blog.save();
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
+exports.changeCategory = async (id, category) => {
+    try {
+        const blog = await Blog.find({id: id});
+        blog.category = category;
+
+        return await blog.save();
     } catch (error) {
         throw new Error(error);
     }
