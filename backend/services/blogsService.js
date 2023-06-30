@@ -10,9 +10,9 @@ exports.getAllBlogs = async () => {
     }
 }
 
-exports.getBlogById = async (id) => {
+exports.getBlogBySlug = async (slug) => {
     try {
-        return await Blog.find({id: id});
+        return await Blog.find({slug: slug});
     } catch (error) {
         throw new Error(error);
     }
@@ -20,24 +20,21 @@ exports.getBlogById = async (id) => {
 
 exports.createBlog = async (user, newBlog) => {
     try {
-        await Blog.create({
-            id: newBlog.id,
-            title: newBlog.title,
-            content: newBlog.content,
-            author: user.username,
-            status: newBlog.status,
-            category: newBlog.category
-        });
-        console.log(newBlog);
+        // Create a slug from the title and the date-month-year
+        const ddMmYyyy = new Date().toLocaleDateString().split("/").join("-");
+        newBlog.slug = ddMmYyyy + "-" + newBlog.title.split(" ").join("-");;
+        newBlog.author = user.username;
+
+        await Blog.create(newBlog);
         return newBlog;
     } catch (error) {
         throw new Error(error);
     }
 }
 
-exports.updateBlog = async (id, blogData) => {
+exports.updateBlog = async (blogSlug, blogData) => {
     try {
-        const blog = await Blog.find({id: id});
+        const blog = await Blog.find({slug: blogSlug});
         blog.title = blogData.title;
         blog.content = blogData.content;
 
@@ -47,9 +44,9 @@ exports.updateBlog = async (id, blogData) => {
     }
 }
 
-exports.deleteBlog = async (id) => {
+exports.deleteBlog = async (blogSlug) => {
     try {
-        return await Blog.deleteOne({id: id});
+        return await Blog.deleteOne({slug: blogSlug});
     } catch (error) {
         throw new Error(error);
     }
@@ -63,9 +60,9 @@ exports.searchBlogs = async (searchQuery) => {
     }
 }
 
-exports.changeStatus = async (id, status) => {
+exports.changeBlogStatus = async (blogSlug, status) => {
     try {
-        const blog = await Blog.find({id: id});
+        const blog = await Blog.find({slug: blogSlug});
         blog.status = status;
 
         return await blog.save();
@@ -74,9 +71,9 @@ exports.changeStatus = async (id, status) => {
     }
 }
 
-exports.changeCategory = async (id, category) => {
+exports.changeBlogCategory = async (blogSlug, category) => {
     try {
-        const blog = await Blog.find({id: id});
+        const blog = await Blog.find({slug: blogSlug});
         blog.category = category;
 
         return await blog.save();

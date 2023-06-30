@@ -2,16 +2,15 @@ const router = require("express").Router();
 const blogsController = require("../controllers/blogsController");
 const { authMiddleware, acl } = require("../middlewares/authMiddleware");
 
-router.use(authMiddleware);
 router.get("/", blogsController.getAllBlogs);
-router.get("/:id", blogsController.getBlogById);
+router.get("/:blogSlug", blogsController.getBlogBySlug);
 router.get("/search/:searchQuery", blogsController.searchBlogs);
 
-router.use(acl);
+router.use(authMiddleware);
 router.post("/", blogsController.createBlog);
-router.put("/:id", blogsController.updateBlog);
-router.patch("/:id/status", blogsController.changeStatus);
-router.patch("/:id/category", blogsController.changeCategory);
-router.delete("/:id", blogsController.deleteBlog);
+router.put("/:blogSlug", blogsController.updateBlog);
+router.patch("/:blogSlug/status", blogsController.changeBlogStatus);
+router.patch("/:blogSlug/category", blogsController.changeBlogCategory);
+router.delete("/:blogSlug", blogsController.deleteBlog);
 
 module.exports = router;

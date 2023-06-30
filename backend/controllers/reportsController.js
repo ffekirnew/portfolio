@@ -9,10 +9,10 @@ exports.getAllReports = async (req, res) => {
     }
 }
 
-exports.getReportById = async (req, res) => {
+exports.getReportBySlug = async (req, res) => {
     try {
-        const reportId = req.params.reportId;
-        const report = await reportsService.getReportById(reportId);
+        const reportSlug = req.params.reportSlug;
+        const report = await reportsService.getReportBySlug(reportSlug);
         res.status(200).json({ report });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -21,7 +21,7 @@ exports.getReportById = async (req, res) => {
 
 exports.createReport = async (req, res) => {
     try {
-        const report = await reportsService.createReport(req.body);
+        const report = await reportsService.createReport(req.user, req.body);
         res.status(201).json({ report });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -30,7 +30,7 @@ exports.createReport = async (req, res) => {
 
 exports.updateReport = async (req, res) => {
     try {
-        const report = await reportsService.updateReport(req.params.reportId, req.body);
+        const report = await reportsService.updateReport(req.params.reportSlug, req.body);
         res.status(200).json({ report });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -39,7 +39,7 @@ exports.updateReport = async (req, res) => {
 
 exports.deleteReport = async (req, res) => {
     try {
-        const report = await reportsService.deleteReport(req.params.reportId);
+        const report = await reportsService.deleteReport(req.params.reportSlug);
         res.status(204).json({ report });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -58,9 +58,9 @@ exports.searchReports = async (req, res) => {
 
 exports.changeReportStatus = async (req, res) => {
   try {
-    const reportId = req.params.reportId;
+    const reportSlug = req.params.reportSlug;
     const status = req.body.status;
-    const report = await reportsService.changeReportStatus(reportId, status);
+    const report = await reportsService.changeStatus(reportSlug, status);
 
     res.status(200).json({ report });
   } catch (error) {
@@ -71,9 +71,9 @@ exports.changeReportStatus = async (req, res) => {
 
 exports.changeReportCategory = async (req, res) => {
   try {
-    const reportId = req.params.reportId;
+    const reportSlug = req.params.reportSlug;
     const category = req.body.category;
-    const report = await reportsService.changeReportCategory(reportId, category);
+    const report = await reportsService.changeCategory(reportSlug, category);
 
     res.status(200).json({ report });
   } catch (error) {

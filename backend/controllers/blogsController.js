@@ -9,10 +9,10 @@ exports.getAllBlogs = async (req, res) => {
     }
 }
 
-exports.getBlogById = async (req, res) => {
+exports.getBlogBySlug = async (req, res) => {
     try {
-        const blogId = req.params.blogId;
-        const blog = await blogsService.getBlogById(id);
+        const blogSlug = req.params.blogSlug;
+        const blog = await blogsService.getBlogBySlug(blogSlug);
         res.status(200).json({ blog });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -30,7 +30,7 @@ exports.createBlog = async (req, res) => {
 
 exports.updateBlog = async (req, res) => {
     try {
-        const blog = await blogsService.updateBlog(req.params.blogId, req.body);
+        const blog = await blogsService.updateBlog(req.params.blogSlug, req.body);
         res.status(200).json({ blog });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -39,7 +39,7 @@ exports.updateBlog = async (req, res) => {
 
 exports.deleteBlog = async (req, res) => {
     try {
-        const blog = await blogsService.deleteBlog(req.params.blogId);
+        const blog = await blogsService.deleteBlog(req.params.blogSlug);
         res.status(204).json({ blog });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error." });
@@ -56,11 +56,11 @@ exports.searchBlogs = async (req, res) => {
 }
 
 
-exports.changeStatus = async (req, res) => {
+exports.changeBlogStatus = async (req, res) => {
   try {
-    const id = req.params.id;
+    const blogSlug = req.params.blogSlug;
     const status = req.body.status;
-    const blog = await blogsService.changeStatus(id, status);
+    const blog = await blogsService.changeStatus(blogSlug, status);
 
     res.status(200).json({ blog });
   } catch (error) {
@@ -69,11 +69,11 @@ exports.changeStatus = async (req, res) => {
 }
 
 
-exports.changeCategory = async (req, res) => {
+exports.changeBlogCategory = async (req, res) => {
   try {
-    const id = req.params.id;
+    const blogSlug = req.params.blogSlug;
     const category = req.body.category;
-    const blog = await blogsService.changeCategory(id, category);
+    const blog = await blogsService.changeCategory(blogSlug, category);
 
     res.status(200).json({ blog });
   } catch (error) {

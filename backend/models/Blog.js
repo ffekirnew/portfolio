@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const blogSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true
-    },
     author: {
         type: String,
         required: true,
@@ -13,6 +8,11 @@ const blogSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+    },
+    slug: {
+        type: String,
+        required: true,
+        unique: true,
     },
     content: {
         type: String,

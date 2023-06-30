@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
 const reportSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true
-    },
     title: {
         type: String,
         required: true,
+    },
+    slug: {
+        type: String,
+        required: true,
+        unique: true,
     },
     content: {
         type: String,
