@@ -9,10 +9,14 @@ const serverPort = Number(process.env.SERVER_PORT);
 const errorHandler = require("./middlewares/errorMiddleware");
 
 // Routes Imports
-const authRoutes = require("./routes/authRoutes");
-const usersRoutes = require("./routes/usersRoutes");
-const blogsRoutes = require("./routes/blogsRoutes");
-const reportsRoutes = require("./routes/reportsRoutes");
+const authRoute = require("./routes/authRoute");
+const usersRoute = require("./routes/usersRoute");
+const blogsRoute = require("./routes/blogsRoute");
+const reportsRoute = require("./routes/reportsRoute");
+const educationsRoute = require("./routes/educationsRoute");
+const experiencesRoute = require("./routes/experiencesRoute");
+const projectsRoute = require("./routes/projectsRoute");
+const socialLinksRoute = require("./routes/socialLinksRoute");
 
 // Configs
 app.use(cors({credentials: true, origin: true}));
@@ -22,10 +26,14 @@ app.use(bodyParser.json());
 app.use(errorHandler);
 
 // Routes
-app.use('/auth', authRoutes);
-app.use('/user', usersRoutes);
-app.use('/blogs', blogsRoutes);
-app.use('/reports', reportsRoutes);
+app.use('/auth', authRoute);
+app.use('/user', usersRoute);
+app.use('/blogs', blogsRoute);
+app.use('/reports', reportsRoute);
+app.use('/educations', educationsRoute);
+app.use('/experiences', experiencesRoute);
+app.use('/projects', projectsRoute);
+app.use('/social-links', socialLinksRoute);
 
 app.listen(serverPort, () => {
     console.log(`Server is running on port ${serverPort}.`);
