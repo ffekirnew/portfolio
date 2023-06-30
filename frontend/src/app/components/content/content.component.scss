@@ -1,0 +1,30 @@
+@import "src/styles.scss";
+
+.content {
+    padding: 0 5%;
+    overflow-y: auto;
+
+    &__introduction {
+        width: 100%;
+    }
+
+    &__resume {
+        width: 100%;
+    }
+
+    &__skills {
+        width: 100%;
+    }
+
+    &__projects {
+        width: 100%;
+    }
+
+    &__contact {
+        width: 100%;
+    }
+
+    .spacing {
+        height: 2rem;
+    }
+}
