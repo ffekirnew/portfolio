@@ -1,0 +1,88 @@
+@import "src/styles.scss";
+
+.resume {
+    width: 100%;
+
+    &__chip {
+        margin: 1rem 0;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+
+        span {
+            color: $clr-accent--primary;
+        }
+
+        h2 {
+            font-family: $ff--primary;
+            font-size: $fs--extra-large;
+            font-weight: $fw--regular;
+            color: $clr--primary;
+            padding-bottom: 2rem;
+        }
+
+        p {
+            font-family: $ff--primary;
+            font-size: $fs--medium;
+            font-weight: $fw--regular;
+            color: $clr--secondary;
+        }
+
+    }
+
+    &__experiences {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__experience {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            font-family: $ff--primary;
+            border: $bw--thin solid $clr--secondary;
+            border-radius: $br--small;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                border: $bw--thin solid $clr-accent--secondary;
+
+            }
+
+            &__date {
+                font-size: $fs--small;
+                font-weight: $fw--regular;
+                color: $clr--secondary;
+                padding-bottom: 1rem;
+            }
+
+            &__title {
+                font-size: $fs--large;
+                font-weight: $fw--semi-bold;
+                color: $clr--primary;
+            }
+
+            &__description {
+                font-size: $fs--medium;
+                font-weight: $fw--regular;
+                color: $clr--secondary;
+            }
+
+            &__location {
+                font-size: $fs--small;
+                font-weight: $fw--regular;
+                color: $clr--secondary;
+            }
+
+            &__spacing {
+                padding: 0.5rem 0;
+            }
+        }
+    }
+}

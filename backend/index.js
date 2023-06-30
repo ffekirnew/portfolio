@@ -5,7 +5,7 @@ require("./config/dbConfig");
 const app = require("express")();
 const cors = require("cors");
 const bodyParser = require('body-parser');
-const PORT = Number(process.env.SERVER_PORT);
+const serverPort = Number(process.env.SERVER_PORT);
 const errorHandler = require("./middlewares/errorMiddleware");
 
 // Routes Imports
@@ -27,6 +27,6 @@ app.use('/user', usersRoutes);
 app.use('/blogs', blogsRoutes);
 app.use('/reports', reportsRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
+app.listen(serverPort, () => {
+    console.log(`Server is running on port ${serverPort}.`);
 });

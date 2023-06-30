@@ -1,0 +1,25 @@
+<div class="education">
+    <div class="education__chip">
+        <app-chip [icon]="icon" [content]="'Education'"></app-chip>
+    </div>
+    <div class="education__content">
+        <h2>My <span>Education</span>.</h2>
+        <p>You can find here the places I have learned before in.</p>
+    </div>
+    <div class="education__educations" *ngFor="let education of educations">
+        <div class="education__educations__education">
+            <div class="education__educations__education__date">
+                <span>{{ education.from }} -</span> 
+                <span *ngIf="!education.current">{{ education.to }}</span>
+                <span *ngIf="education.current">Present</span>
+            </div>
+            <h3 class="education__educations__education__title">{{ education.title }} | {{ education.school }}</h3>
+            <div class="education__educations__education__spacing"></div>
+            <p class="education__educations__education__description">{{ education.description }}</p>
+            <div class="education__educations__education__spacing"></div>
+            <p class="education__educations__education__location">{{ education.location }}</p>
+        </div>
+    </div>
+</div>
+
+

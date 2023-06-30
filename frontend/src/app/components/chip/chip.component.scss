@@ -1,0 +1,33 @@
+@import "src/styles.scss";
+
+.chip {
+    display: inline-block;
+    padding: 1% 1%;
+
+    background-color: $clr-background--primary;
+    color: $clr--primary;
+    
+    border: $bw--thin solid $clr--secondary;
+    border-radius: 10% / 50%;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+        background-color: $clr-background--secondary
+    }
+
+    fa-icon {
+        padding: 0 5px;
+        font-size: $fs--small;
+        text-align: center;
+    }
+    
+    span {
+        padding: 0 5px;
+        font-family: $ff--mono;
+        font-size: $fs--extra-small;
+        line-height: $fs--medium;
+        text-align: center;
+    }
+}

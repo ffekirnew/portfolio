@@ -6,13 +6,51 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
-  border: $bw--thick solid $clr--primary;
-  border-radius: 20px;
+  border: $bw--thinnest solid $clr--secondary;
+  border-radius: $br--wide;
+
+  &__header {
+    padding: 0 2rem;
+  }
+
+  &__image {
+    padding: 0 2rem;
+
+    img {
+      width: 100%;
+      border-radius: $br--wide;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__bio {
+    padding: 0 2rem;
+
+    p {
+      font-family: $ff--primary;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
 
   &__links {
-    width: 100%;
-    padding: 2rem 0;
+    padding: 0 2rem;
   }
+
+  &__button {
+    padding: 1.4rem 2rem;
+
+    &:hover {
+      padding-top: 1.1rem;
+      padding-bottom: 1.7rem;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.spacing {
+  padding: 0.7rem 0;
 }

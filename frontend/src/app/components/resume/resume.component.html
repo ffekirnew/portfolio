@@ -1,1 +1,25 @@
-<p>resume works!</p>
+<div class="resume">
+    <div class="resume__chip">
+        <app-chip [icon]="icon" [content]="'Resume'"></app-chip>
+    </div>
+    <div class="resume__content">
+        <h2>My <span>Experiences</span>.</h2>
+        <p>You can find here the places I have worked before in.</p>
+    </div>
+    <div class="resume__experiences" *ngFor="let experience of experiences">
+        <div class="resume__experiences__experience">
+            <div class="resume__experiences__experience__date">
+                <span>{{ experience.from }} -</span> 
+                <span *ngIf="!experience.current">{{ experience.to }}</span>
+                <span *ngIf="experience.current">Present</span>
+            </div>
+            <h3 class="resume__experiences__experience__title">{{ experience.title }} | {{ experience.company }}</h3>
+            <div class="resume__experiences__experience__spacing"></div>
+            <p class="resume__experiences__experience__description">{{ experience.description }}</p>
+            <div class="resume__experiences__experience__spacing"></div>
+            <p class="resume__experiences__experience__location">{{ experience.location }}</p>
+        </div>
+    </div>
+</div>
+
+

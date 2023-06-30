@@ -1,0 +1,127 @@
+@import "src/styles.scss";
+
+.contact {
+    width: 100%;
+
+    &__chip {
+        margin: 1rem 0;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+
+        span {
+            color: $clr-accent--primary;
+        }
+
+        h2 {
+            font-family: $ff--primary;
+            font-size: $fs--extra-large;
+            font-weight: $fw--regular;
+            color: $clr--primary;
+            padding-bottom: 2rem;
+        }
+
+        p {
+            font-family: $ff--primary;
+            font-size: $fs--medium;
+            font-weight: $fw--regular;
+            color: $clr--secondary;
+        }
+
+    }
+
+    &__form {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $clr--primary;
+
+        .form-row {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            justify-content: left;
+        }
+
+        .form-group {
+            width: 100%;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        label {
+            font-family: $ff--primary;
+            font-size: $fs--small;
+            font-weight: $fw--regular;
+            color: $clr--secondary;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: $bw--thinnest solid $clr--secondary;
+            background: transparent;
+            outline: none;
+            font-family: $ff--primary;
+            font-size: $fs--medium;
+            font-weight: $fw--regular;
+            color: $clr--primary;
+
+            &:focus {
+                border-bottom: $bw--thin solid $clr-accent--primary;
+            }
+        }
+
+        textarea {
+            // Fixed siz
+            width: 100%;
+            height: 10rem;
+            resize: none;
+
+            border: none;
+            border-bottom: $bw--thinnest solid $clr--secondary;
+            background: transparent;
+            outline: none;
+            font-family: $ff--primary;
+            font-size: $fs--medium;
+            font-weight: $fw--regular;
+            color: $clr--primary;
+
+            &:focus {
+                border-bottom: $bw--thin solid $clr-accent--primary;
+            }
+        }
+
+        select {
+            width: 100%;
+            border: none;
+            border-bottom: $bw--thinnest solid $clr--secondary;
+            background: transparent;
+            outline: none;
+            font-family: $ff--primary;
+            font-size: $fs--medium;
+            font-weight: $fw--regular;
+            color: $clr--primary;
+
+            &:focus {
+                border-bottom: $bw--thin solid $clr-accent--primary;
+            }
+        }
+
+        .form-button {
+            width: 25%;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+}

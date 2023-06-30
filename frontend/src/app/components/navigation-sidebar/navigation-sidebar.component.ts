@@ -7,7 +7,8 @@ import {
   faHome,
   faPersonSkiing,
   faStar,
-  faUser
+  faUser,
+  faUserGraduate
 } from "@fortawesome/free-solid-svg-icons";
 @Component({
   selector: 'app-navigation-sidebar',
@@ -18,12 +19,13 @@ export class NavigationSidebarComponent {
 
   public links: NavigationLinkModel[] = [
     new NavigationLinkModel('Home', '/home', faHome),
-    new NavigationLinkModel('Introduction', '/home/introduction', faUser),
-    new NavigationLinkModel('Resume', '/home/resume', faFile),
-    new NavigationLinkModel('Specializations', '/home/specializations', faStar),
-    new NavigationLinkModel('Skills', '/home/skills', faPersonSkiing),
-    new NavigationLinkModel('Projects', '/home/projects', faBuilding),
-    new NavigationLinkModel('Contact', '/home/contact', faContactBook),
+    new NavigationLinkModel('Introduction', '/home#introduction', faUser),
+    new NavigationLinkModel('Resume', '/home#resume', faFile),
+    new NavigationLinkModel('Education', '/home#education', faUserGraduate),
+    new NavigationLinkModel('Specializations', '/home#specializations', faStar),
+    new NavigationLinkModel('Skills', '/home#skills', faPersonSkiing),
+    new NavigationLinkModel('Projects', '/home#projects', faBuilding),
+    new NavigationLinkModel('Contact', '/home#contact', faContactBook)
   ];
   constructor() { }
 }

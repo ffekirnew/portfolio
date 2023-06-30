@@ -1,0 +1,36 @@
+@import "src/styles.scss";
+
+.button {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5% 0;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background: $clr-accent--primary;
+    color: $clr--dark;
+    
+    // have a border that is fully circular on sides left and right
+    border: $bw--thin solid $clr-accent--primary;
+    border-radius: 10% / 50%;
+
+    // Add a shadow
+    box-shadow: 0 0 0.5rem $clr--dark;
+
+    &:hover {
+        background: $clr-accent--lighter;
+        box-shadow: 0 0 0.5rem #000;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    p {
+        font-family: $ff--primary;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}

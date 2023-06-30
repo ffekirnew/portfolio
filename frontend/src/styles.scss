@@ -2,11 +2,13 @@
 
 // Colors
 $clr--primary: #fcfcfc;
-$clr--secondary: #d4d4d4;
-$clr-accent--primary: #2ae98b;
-$clr-accent--secondary: #3ed18a;
+$clr--secondary: #95959a;
 $clr-background--primary: #1f1f21;
 $clr-background--secondary: #19191b;
+$clr-accent--primary: #2ae98b;
+$clr-accent--lighter: #2aff8f;
+$clr-accent--secondary: #238f5b;
+$clr--dark: $clr-background--primary;
 
 // Fonts
 $ff--primary: 'Poppins', sans-serif;
@@ -19,14 +21,21 @@ $fw--semi-bold: 600;
 $fw--bold: 700;
 
 // Font Sizes
+$fs--extra-small: 0.8rem;
 $fs--small: 1rem;
-$fs--medium: 1.6rem;
+$fs--medium: 1.3rem;
 $fs--large: 2rem;
-$fs--extra-large: 2.5rem;
+$fs--extra-large: 2.7rem;
+$fs--extra-extra-large: 4rem;
 
 // Border Width
+$bw--thinnest: 0.5px;
 $bw--thin: 1px;
 $bw--thick: 2px;
+
+// Border Radius
+$br--wide: 20px;
+$br--small: 10px;
 
 
 // Reset Styling for all HTML and CSS
