@@ -4,7 +4,7 @@ import {
   faBuilding,
   faContactBook,
   faFile,
-  faHome,
+  faHamburger,
   faPersonSkiing,
   faStar,
   faUser,
@@ -16,9 +16,9 @@ import {
   styleUrls: ['./navigation-sidebar.component.scss']
 })
 export class NavigationSidebarComponent {
+  public navIcon = faHamburger;
 
   public links: NavigationLinkModel[] = [
-    new NavigationLinkModel('Home', '/home', faHome),
     new NavigationLinkModel('Introduction', '/home#introduction', faUser),
     new NavigationLinkModel('Resume', '/home#resume', faFile),
     new NavigationLinkModel('Education', '/home#education', faUserGraduate),

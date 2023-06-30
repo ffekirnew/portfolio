@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
-import { Experience } from 'src/app/shared/dto/experience.i';
+import { Experience } from 'src/app/shared/interfaces/experience.i';
 
 @Component({
   selector: 'app-resume',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
-import { Education } from 'src/app/shared/dto/education.i';
+import { Education } from 'src/app/shared/interfaces/education.i';
 
 @Component({
   selector: 'app-education',

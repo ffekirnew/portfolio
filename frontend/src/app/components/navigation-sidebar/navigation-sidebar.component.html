@@ -1,7 +1,9 @@
-<div class="navigation-sidebar">
-    <div class="navigation-sidebar__link" *ngFor="let link of links">
-        <a [routerLink]="link.url" routerLinkActive="active">
-            <fa-icon class="navigation-sidebar__link__icon" [icon]="link.icon"></fa-icon>
-        </a>
+<div class="navigation">
+    <div class="navigation__navigation-sidebar">
+        <div class="navigation__navigation-sidebar__link" *ngFor="let link of links">
+            <a [routerLink]="link.url" routerLinkActive="active">
+                <fa-icon class="navigation__navigation-sidebar__link__icon" [icon]="link.icon"></fa-icon>
+            </a>
+        </div>
     </div>
 </div>
