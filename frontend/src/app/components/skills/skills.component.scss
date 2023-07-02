@@ -1,0 +1,48 @@
+@import "src/styles.scss";
+
+.skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__chip {
+        margin: 1rem 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 1rem 0;
+
+        span {
+            color: $clr-accent--primary;
+        }
+
+        h2 {
+            font-family: $ff--primary;
+            font-size: $fs--extra-large;
+            font-weight: $fw--regular;
+            color: $clr--primary;
+
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-family: $ff--primary;
+            font-size: $fs--medium;
+            font-weight: $fw--regular;
+            color: $clr--secondary;
+        }
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 1rem;
+    
+        &__skill {
+            aspect-ratio: 1/1;
+        }
+    }
+}

@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<div class="skills">
+    <div class="skills__chip">
+        <app-chip [icon]="icon" [content]="'Skills'"></app-chip>
+    </div>
+    <div class="skills__content">
+        <h2>My <span>Skills</span>.</h2>
+        <p>I have listed here the technologies I use on the daily and some other technologies I am very familiar with.
+        </p>
+    </div>
+    <div class="skills__list">
+        <div class="skills__list__skill" *ngFor="let skill of skills">
+            <app-skill [skill]="skill"></app-skill>
+        </div>
+    </div>
+</div>

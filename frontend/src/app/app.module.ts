@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { ContactComponent } from './components/contact/contact.component';
 import { ChipComponent } from './components/chip/chip.component';
 import { EducationComponent } from './components/education/education.component';
+import { SkillComponent } from './components/skills/skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,14 @@ import { EducationComponent } from './components/education/education.component';
     IntroductionComponent,
     ContactComponent,
     ChipComponent,
-    EducationComponent
+    EducationComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

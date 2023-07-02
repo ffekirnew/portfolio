@@ -2,7 +2,7 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-exports.registerUser = async (userData, admin) => {
+exports.registerUser = async (userData, adminUser) => {
     try {
         // Create a salt and hash the password
         const salt = await bcrypt.genSalt(10);
@@ -14,7 +14,7 @@ exports.registerUser = async (userData, admin) => {
             salt: salt,
             email: userData.email,
             password: hashedPassword,
-            role: (admin ? 'admin' : 'user')
+            role: (adminUser ? 'admin' : 'user')
         });
 
         // Save the user

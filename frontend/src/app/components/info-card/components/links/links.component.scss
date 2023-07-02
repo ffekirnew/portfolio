@@ -7,18 +7,18 @@
   align-items: center;
 
   &__link {
-    padding: 1rem;
     margin: 0 1%;
-    border: $bw--thin solid $clr--primary;
-    border-radius: 100%;
 
-    &__icon {
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+
+      &:hover {
+        // border: $bw--thin solid $clr-accent--primary;
+        // border-radius: 100%;
         color: $clr--primary;
-        font-size: $fs--small;
-
-        &:hover {
-            color: $clr-accent--primary;
-        }
+        transform: scale(1.1);
+      }
     }
   }
 }

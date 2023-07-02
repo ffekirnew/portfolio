@@ -1,21 +1,21 @@
-<div class="container">
-    <div class="container__chip">
+<div class="projects">
+    <div class="projects__chip">
         <app-chip [icon]="icon" [content]="'Projects'"></app-chip>
     </div>
-    <div class="container__content">
+    <div class="projects__content">
         <h2>My <span>Projects</span>.</h2>
         <p>You can find here the different projects I have worked on before.</p>
     </div>
-    <div class="container__projects" *ngFor="let project of projects">
-        <div class="container__projects__project">
-            <img class="container__projects__project__image" src="{{ project.image }}">
-            <div class="container__projects__project__title">
+    <div class="projects__list" *ngFor="let project of projects">
+        <div class="projects__list__project">
+            <img class="projects__list__project__image" src="{{ project.image }}">
+            <div class="projects__list__project__title">
                 {{ project.title }}
             </div>
-            <div class="container__projects__project__description">
+            <div class="projects__list__project__description">
                 {{ project.description }}
             </div>
-            <a routerLink="/projects/{{project.id}}" class="container__projects__project__button">
+            <a routerLink="/projects/{{project.id}}" class="projects__list__project__button">
                 <app-button [content]="'Read More'"></app-button>
             </a>
         </div>

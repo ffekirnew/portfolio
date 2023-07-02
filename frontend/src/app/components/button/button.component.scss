@@ -18,6 +18,7 @@
     // have a border that is fully circular on sides left and right
     border: $bw--thin solid $clr-accent--primary;
     border-radius: 10% / 50%;
+    // border-radius: $br--small;
 
     // Add a shadow
     box-shadow: 0 0 0.5rem $clr--dark;
