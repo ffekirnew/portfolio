@@ -1,5 +1,12 @@
 const mongoose = require("mongoose");
 
+const technologySchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+});
+
 const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -20,8 +27,10 @@ const ProjectSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
+        required: true,
         default: Date.now,
     },
+    technologies: [technologySchema],
 });
 
 module.exports = mongoose.model("Project", ProjectSchema);

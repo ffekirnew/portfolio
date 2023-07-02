@@ -16,7 +16,6 @@ const reportsRoute = require("./routes/reportsRoute");
 const educationsRoute = require("./routes/educationsRoute");
 const experiencesRoute = require("./routes/experiencesRoute");
 const projectsRoute = require("./routes/projectsRoute");
-const socialLinksRoute = require("./routes/socialLinksRoute");
 
 // Configs
 app.use(cors({credentials: true, origin: true}));
@@ -26,14 +25,14 @@ app.use(bodyParser.json());
 app.use(errorHandler);
 
 // Routes
-app.use('/auth', authRoute);
-app.use('/user', usersRoute);
-app.use('/blogs', blogsRoute);
-app.use('/reports', reportsRoute);
-app.use('/educations', educationsRoute);
-app.use('/experiences', experiencesRoute);
-app.use('/projects', projectsRoute);
-app.use('/social-links', socialLinksRoute);
+const apiPrefix = '/api/v1';
+app.use(`${apiPrefix}/auth`, authRoute);
+app.use(`${apiPrefix}/user`, usersRoute);
+app.use(`${apiPrefix}/blogs`, blogsRoute);
+app.use(`${apiPrefix}/reports`, reportsRoute);
+app.use(`${apiPrefix}/educations`, educationsRoute);
+app.use(`${apiPrefix}/experiences`, experiencesRoute);
+app.use(`${apiPrefix}/projects`, projectsRoute);
 
 app.listen(serverPort, () => {
     console.log(`Server is running on port ${serverPort}.`);
