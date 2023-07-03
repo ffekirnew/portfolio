@@ -41,7 +41,15 @@ const educationSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
         default: false
-    }
+    },
+    location: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
 });
 
 module.exports = mongoose.model("Education", educationSchema);

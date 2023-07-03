@@ -1,7 +1,7 @@
 import { state, style, transition, animate, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
-import { Education } from 'src/app/shared/interfaces/education.i';
+import { Education } from 'src/app/shared/education.interface';
 
 @Component({
   selector: 'app-education',
@@ -24,25 +24,22 @@ export class EducationComponent {
   public icon = faGraduationCap;
   public educations: Education[] = [
     {
-      id: 1,
-      title: 'B.Sc. in Software Engineering',
-      school: 'Addis Ababa University',
-      location: 'Addis Ababa, Ethiopia',
-      from: "May 2023",
-      to: "",
-      current: true,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      id: 2,
-      title: 'Software Engineer',
-      school: 'SOS Herman Gmeiner International School',
-      location: 'Jimma, Ethiopia',
-      from: "September 2020",
-      to: "May 2023",
+      school: 'Example University',
+      slug: 'example-university',
+      degree: 'Bachelor of Science',
+      field: 'Computer Science',
+      start: {
+        month: 'September',
+        year: '2018'
+      },
+      end: {
+        month: 'May',
+        year: '2022'
+      },
       current: false,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
+      location: 'Example City, Example State',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, nisl quis aliquam ultricies, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl.'
+    },
   ];
 
   toggle() {

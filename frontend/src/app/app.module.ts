@@ -46,7 +46,7 @@ import { SkillComponent } from './components/skills/skill/skill.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

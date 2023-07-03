@@ -9,12 +9,12 @@
   <div @flyInOut class="education__educations" *ngFor="let education of educations">
     <div class="education__educations__education">
       <div class="education__educations__education__date">
-        <span>{{ education.from }} -</span>
-        <span *ngIf="!education.current">{{ education.to }}</span>
+        <span>{{ education.start.month }} {{ education.start.year }} - </span>
+        <span *ngIf="!education.current">{{ education.end.month }} {{ education.end.year }}</span>
         <span *ngIf="education.current">Present</span>
       </div>
       <h3 class="education__educations__education__title">
-        {{ education.title }} | {{ education.school }}
+        {{ education.degree }} in {{ education.field }} | {{ education.school }}
       </h3>
       <div class="education__educations__education__spacing"></div>
       <p class="education__educations__education__description">

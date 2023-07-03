@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Skill } from 'src/app/shared/interfaces/skill.i';
 
 @Component({
   selector: 'app-skills',
@@ -10,7 +9,7 @@ import { Skill } from 'src/app/shared/interfaces/skill.i';
 export class SkillsComponent {
   public icon = faStar;
   public devIconsFolder: string = "assets/mydevicons/";
-  public skills: Skill[] = [
+  public skills: any = [
     { image: `${this.devIconsFolder}python/python-original.svg`, name: 'Python', },
     { image: `${this.devIconsFolder}django/django-plain.svg`, name: 'django', },
     { image: `${this.devIconsFolder}jupyter/jupyter-original.svg`, name: 'Jupyter', },

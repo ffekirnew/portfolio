@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faFile } from '@fortawesome/free-solid-svg-icons';
-import { Experience } from 'src/app/shared/interfaces/experience.i';
+import { Experience } from 'src/app/shared/experience.interface';
 
 @Component({
   selector: 'app-resume',
@@ -10,25 +10,32 @@ import { Experience } from 'src/app/shared/interfaces/experience.i';
 export class ResumeComponent {
   public icon = faFile;
   public experiences: Experience[] = [
-    {
-      id: 1,
-      title: 'Software Engineer',
-      company: 'BeBlocky',
-      location: 'Addis Ababa, Ethiopia',
-      from: "May 2023",
-      to: "",
-      current: true,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  {
+    role: 'Software Engineer',
+    slug: 'software-engineer',
+    description: 'Worked on various software projects.',
+    company: 'Example Company',
+    place: 'remote',
+    type: 'full-time',
+    start: {
+      month: 'January',
+      year: '2020',
     },
-    {
-      id: 2,
-      title: 'Software Engineer',
-      company: 'Yenetta Code',
-      location: 'Addis Ababa, Ethiopia',
-      from: "September 2020",
-      to: "May 2023",
-      current: false,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-  ];
+    end: {
+      month: 'December',
+      year: '2021',
+    },
+    current: false,
+    location: 'New York',
+    skills: [
+      { name: 'JavaScript' },
+      { name: 'React' },
+    ],
+    technologies: [
+      { name: 'Node.js' },
+      { name: 'MongoDB' },
+    ],
+  },
+  // Add more experience objects as needed
+];
 }

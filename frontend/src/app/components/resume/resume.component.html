@@ -9,13 +9,15 @@
     <div class="resume__experiences" *ngFor="let experience of experiences">
         <div class="resume__experiences__experience">
             <div class="resume__experiences__experience__date">
-                <span>{{ experience.from }} -</span> 
-                <span *ngIf="!experience.current">{{ experience.to }}</span>
+                <span>{{ experience.start.month }} {{ experience.start.year }} - </span> 
+                <span *ngIf="!experience.current">{{ experience.end?.month }} {{ experience.end?.year }}</span>
                 <span *ngIf="experience.current">Present</span>
             </div>
-            <h3 class="resume__experiences__experience__title">{{ experience.title }} | {{ experience.company }}</h3>
+            <h3 class="resume__experiences__experience__title">{{ experience.role }} | {{ experience.company }}</h3>
             <div class="resume__experiences__experience__spacing"></div>
             <p class="resume__experiences__experience__description">{{ experience.description }}</p>
+            <div class="resume__experiences__experience__spacing"></div>
+            <p class="resume__experiences__experience__description">{{ experience.type }} | {{ experience.place }}</p>
             <div class="resume__experiences__experience__spacing"></div>
             <p class="resume__experiences__experience__location">{{ experience.location }}</p>
         </div>

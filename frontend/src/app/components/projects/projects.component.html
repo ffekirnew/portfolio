@@ -10,12 +10,12 @@
         <div class="projects__list__project">
             <img class="projects__list__project__image" src="{{ project.image }}">
             <div class="projects__list__project__title">
-                {{ project.title }}
+                {{ project.name }}
             </div>
             <div class="projects__list__project__description">
                 {{ project.description }}
             </div>
-            <a routerLink="/projects/{{project.id}}" class="projects__list__project__button">
+            <a routerLink="/projects/{{project.slug}}" class="projects__list__project__button">
                 <app-button [content]="'Read More'"></app-button>
             </a>
         </div>

@@ -11,6 +11,20 @@ const monthYearSchema = new mongoose.Schema({
     }
 });
 
+const skillSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+});
+
+const technologySchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+});
+
 const experienceSchema = new mongoose.Schema({
     role: {
         type: String,
@@ -52,7 +66,13 @@ const experienceSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
         default: false
-    }
+    },
+    location: {
+        type: String,
+        required: true,
+    },
+    skills: [skillSchema],
+    technologies: [technologySchema],
 });
 
 module.exports = mongoose.model("Experience", experienceSchema);
