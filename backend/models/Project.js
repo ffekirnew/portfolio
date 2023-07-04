@@ -30,6 +30,13 @@ const ProjectSchema = new mongoose.Schema({
         required: true,
         default: Date.now,
     },
+    image: {
+        type: String,
+        required: true,
+    },
+    github: {
+        type: String,
+    },
     technologies: [technologySchema],
 });
 

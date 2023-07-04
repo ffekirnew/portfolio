@@ -2,11 +2,14 @@ require("dotenv").config({path: './.env'});
 require("./config/dbConfig");
 
 // Main Imports
-const app = require("express")();
+const express = require("express");
+const app = express();
+const path = require("path");
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const serverPort = Number(process.env.SERVER_PORT);
 const errorHandler = require("./middlewares/errorMiddleware");
+const fileUpload = require('express-fileupload');
 
 // Routes Imports
 const authRoute = require("./routes/authRoute");
@@ -23,6 +26,11 @@ app.use(bodyParser.json());
 
 // Middlewares
 app.use(errorHandler);
+app.use(fileUpload());
+
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 const apiPrefix = '/api/v1';
