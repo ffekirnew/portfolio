@@ -8,7 +8,7 @@ import { Experience } from '../experience.interface';
   providedIn: 'root'
 })
 export class ExperienceService {
-  public static readonly API_ENDPOINT = Constants.API_ENDPOINT + '/educations';
+  public static readonly API_ENDPOINT = Constants.API_ENDPOINT + '/experiences';
 
   constructor(
     private httpClient: HttpClient
