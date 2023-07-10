@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { NavigationLinkModel } from "../../../../shared/models/navigation-link.model";
-import { faHome, faImage, faNewspaper } from "@fortawesome/free-solid-svg-icons";
-import { SocialLink } from 'src/app/shared/interfaces/social-link.i';
 
 @Component({
     selector: 'app-links',
@@ -9,7 +6,7 @@ import { SocialLink } from 'src/app/shared/interfaces/social-link.i';
     styleUrls: ['./links.component.scss']
 })
 export class LinksComponent {
-    public socialLinks: SocialLink[] = [
+    public socialLinks: any[] = [
         {
             name: 'Github',
             url: 'https://www.github.com/ffekirnew',

@@ -1,7 +1,7 @@
 export interface Education {
   school: string;
   slug: string;
-  degree: string;
+  degree: string | null;
   field: string;
   start: {
     month: string;

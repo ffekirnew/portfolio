@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from 'src/app/shared/interfaces/skill.i';
 
 @Component({
   selector: 'app-skill',
@@ -7,6 +6,6 @@ import { Skill } from 'src/app/shared/interfaces/skill.i';
   styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent {
-  @Input() public skill: Skill = { name: '', image: ''};
+  @Input() public skill: any = { name: '', image: ''};
 }
 

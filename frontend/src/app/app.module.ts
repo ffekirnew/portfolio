@@ -21,6 +21,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ChipComponent } from './components/chip/chip.component';
 import { EducationComponent } from './components/education/education.component';
 import { SkillComponent } from './components/skills/skill/skill.component';
+import { LoadingRipplesComponent } from './ui-ux/loading-ripples/loading-ripples.component';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { EducationService } from './shared/services/education.service';
+import { ExperienceService } from './shared/services/experience.service';
+import { ProjectService } from './shared/services/project.service';
+import { TruncatePipe } from './shared/pipes/truncate.pipe';
+import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -40,15 +47,24 @@ import { SkillComponent } from './components/skills/skill/skill.component';
     ContactComponent,
     ChipComponent,
     EducationComponent,
-    SkillComponent
+    SkillComponent,
+    LoadingRipplesComponent,
+    TruncatePipe,
+    CapitalizePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    HttpClient,
+    EducationService,
+    ExperienceService,
+    ProjectService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

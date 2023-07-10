@@ -4,10 +4,10 @@
     </div>
     <div class="projects__content">
         <h2>My <span>Projects</span>.</h2>
-        <p>You can find here the different projects I have worked on before.</p>
+        <p>This section showcases a collection of my notable projects, demonstrating my skills, creativity, and problem-solving abilities. It offers a glimpse into my hands-on experience and serves as a portfolio highlighting my accomplishments in various domains.</p>
     </div>
-    <div class="projects__list" *ngFor="let project of projects">
-        <div class="projects__list__project">
+    <div *ngIf="!loading" class="projects__list">
+        <div *ngFor="let project of projects" class="projects__list__project">
             <img class="projects__list__project__image" src="{{ project.image }}">
             <div class="projects__list__project__title">
                 {{ project.name }}
@@ -15,9 +15,16 @@
             <div class="projects__list__project__description">
                 {{ project.description }}
             </div>
+            <div class="projects__list__project__technologies">
+                Technologies:
+                <div *ngFor="let tech of project.technologies" class="projects__list__project__technologies__tech">
+                    {{ tech.name }},
+                </div>
+            </div>
             <a routerLink="/projects/{{project.slug}}" class="projects__list__project__button">
                 <app-button [content]="'Read More'"></app-button>
             </a>
         </div>
     </div>
+    <app-loading-ripples *ngIf="loading"></app-loading-ripples>
 </div>

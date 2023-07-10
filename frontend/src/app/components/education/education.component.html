@@ -4,21 +4,21 @@
   </div>
   <div class="education__content">
     <h2>My <span>Education</span>.</h2>
-    <p>You can find here the places I have learned before in.</p>
+    <p>This section showcases my academic journey, highlighting my qualifications, degrees, courses, and educational accomplishments to provide a comprehensive overview of my scholastic background and expertise.</p>
   </div>
-  <div @flyInOut class="education__educations" *ngFor="let education of educations">
-    <div class="education__educations__education">
+  <div *ngIf="!loading" class="education__educations">
+    <div class="education__educations__education" *ngFor="let education of educations">
       <div class="education__educations__education__date">
         <span>{{ education.start.month }} {{ education.start.year }} - </span>
         <span *ngIf="!education.current">{{ education.end.month }} {{ education.end.year }}</span>
         <span *ngIf="education.current">Present</span>
       </div>
       <h3 class="education__educations__education__title">
-        {{ education.degree }} in {{ education.field }} | {{ education.school }}
+        <span *ngIf="education.degree">{{ education.degree }} in</span> {{ education.field }} | {{ education.school }}
       </h3>
       <div class="education__educations__education__spacing"></div>
       <p class="education__educations__education__description">
-        {{ education.description }}
+        {{ education.description | truncate:18 }}
       </p>
       <div class="education__educations__education__spacing"></div>
       <p class="education__educations__education__location">
@@ -26,4 +26,5 @@
       </p>
     </div>
   </div>
+  <app-loading-ripples *ngIf="loading"></app-loading-ripples>
 </div>

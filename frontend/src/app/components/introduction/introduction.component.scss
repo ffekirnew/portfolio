@@ -30,6 +30,7 @@
         p {
             font-family: $ff--primary;
             font-size: $fs--medium;
+            line-height: $lh--medium;
             font-weight: $fw--regular;
             color: $clr--secondary;
         }
@@ -54,7 +55,7 @@
                     letter-spacing: 4px;
                     text-transform: uppercase;
                     font-family: $ff--mono;
-                    font-size: $fs--medium;
+                    font-size: $fs--large;
                     font-weight: $fw--regular;
                     fill: $clr--primary;
                     // text-shadow: 2px 0px #ccc;

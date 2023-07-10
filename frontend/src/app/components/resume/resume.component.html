@@ -4,24 +4,31 @@
     </div>
     <div class="resume__content">
         <h2>My <span>Experiences</span>.</h2>
-        <p>You can find here the places I have worked before in.</p>
+        <p>This section provides a detailed account of my professional journey, showcasing my work history, positions held, responsibilities undertaken, and notable achievements. It offers insights into my career progression and showcases the breadth and depth of my professional expertise.</p>
     </div>
-    <div class="resume__experiences" *ngFor="let experience of experiences">
-        <div class="resume__experiences__experience">
-            <div class="resume__experiences__experience__date">
-                <span>{{ experience.start.month }} {{ experience.start.year }} - </span> 
-                <span *ngIf="!experience.current">{{ experience.end?.month }} {{ experience.end?.year }}</span>
-                <span *ngIf="experience.current">Present</span>
+    <div *ngIf="!loading" class="resume__experiences">
+        <div *ngFor="let experience of experiences" class="resume__experiences__experience">
+            <div class="resume__experiences__experience__timeline-point-track">
+                <div class="resume__experiences__experience__timeline-point-track__point" [class]="experience.current ? 'current' : 'past'"></div>
+                <div class="resume__experiences__experience__timeline-point-track__track"  [class]="experience.current ? 'current' : 'past'"></div>
             </div>
-            <h3 class="resume__experiences__experience__title">{{ experience.role }} | {{ experience.company }}</h3>
-            <div class="resume__experiences__experience__spacing"></div>
-            <p class="resume__experiences__experience__description">{{ experience.description }}</p>
-            <div class="resume__experiences__experience__spacing"></div>
-            <p class="resume__experiences__experience__description">{{ experience.type }} | {{ experience.place }}</p>
-            <div class="resume__experiences__experience__spacing"></div>
-            <p class="resume__experiences__experience__location">{{ experience.location }}</p>
+            <div class="resume__experiences__experience__content">
+                <div class="resume__experiences__experience__content__date">
+                    <span>{{ experience.start.month }} {{ experience.start.year }} - </span> 
+                    <span *ngIf="!experience.current">{{ experience.end?.month }} {{ experience.end?.year }}</span>
+                    <span *ngIf="experience.current">Present</span>
+                </div>
+                <h3 class="resume__experiences__experience__content__title">{{ experience.role }} | {{ experience.company }}</h3>
+                <div class="resume__experiences__experience__content__spacing"></div>
+                <p class="resume__experiences__experience__content__description">{{ experience.description | truncate:18 }}</p>
+                <div class="resume__experiences__experience__content__spacing"></div>
+                <p class="resume__experiences__experience__content__type">{{ experience.type | capitalize }} | {{ experience.place | capitalize }}</p>
+                <div class="resume__experiences__experience__content__spacing"></div>
+                <p class="resume__experiences__experience__content__location">{{ experience.location }}</p>
+            </div>
         </div>
     </div>
+    <app-loading-ripples *ngIf="loading"></app-loading-ripples>
 </div>
 
 

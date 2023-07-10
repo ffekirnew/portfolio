@@ -29,6 +29,7 @@
         p {
             font-family: $ff--primary;
             font-size: $fs--medium;
+            line-height: $lh--medium;
             font-weight: $fw--regular;
             color: $clr--secondary;
         }
@@ -42,7 +43,7 @@
         justify-content: center;
 
         &__education {
-            margin-left: 2rem;
+            // margin-left: 2rem;
             margin-bottom: 1rem;
             padding: 1rem;
             font-family: $ff--primary;
@@ -70,6 +71,7 @@
 
             &__description {
                 font-size: $fs--medium;
+                line-height: $lh--medium;
                 font-weight: $fw--regular;
                 color: $clr--secondary;
             }

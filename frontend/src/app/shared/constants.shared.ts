@@ -1,3 +1,3 @@
 export class Constants {
-  public static readonly API_ENDPOINT = 'http://localhost:3000';
+  public static readonly API_ENDPOINT = 'https://api.fikernew-birhanu.me/api/v1';
 }
