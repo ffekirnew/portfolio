@@ -61,9 +61,26 @@ export class EducationComponent implements OnInit {
         month: 'November',
         year: '2023'
       },
-      current: false,
+      current: true,
       location: 'Addis Ababa, Ethiopia',
-      description: ' Completed a program focused on Data Structures and Algorithms at A2SV. Explored fundamental data structures such as arrays, linked lists, stacks, queues, trees, and graphs. Learned various algorithms for sorting, searching, and graph traversal. Developed problem-solving skills and gained a deeper understanding of efficient algorithms and their analysis. Applied the learned concepts to solve programming challenges and implement efficient solutions. Collaborated with peers to enhance knowledge and skills in the field of Data Structures and Algorithms.'
+      description: 'Completed a program focused on Data Structures and Algorithms at A2SV. Explored fundamental data structures such as arrays, linked lists, stacks, queues, trees, and graphs. Learned various algorithms for sorting, searching, and graph traversal. Developed problem-solving skills and gained a deeper understanding of efficient algorithms and their analysis. Applied the learned concepts to solve programming challenges and implement efficient solutions. Collaborated with peers to enhance knowledge and skills in the field of Data Structures and Algorithms.'
+    },
+    {
+      school: 'SOS Hermann Gmeiner School',
+      slug: 'high-school-at-sos-hermann-gmeiner-school',
+      degree: null,
+      field: 'High School',
+      start: {
+        month: 'September',
+        year: '2017'
+      },
+      end: {
+        month: 'April',
+        year: '2021'
+      },
+      current: false,
+      location: 'Jimma, Ethiopia',
+      description: 'Completed high school at SOS Hermann Gmeiner School. Studied various subjects including Mathematics, Physics, Chemistry, Biology, English, Amharic, and more. Engaged in extracurricular activities such as sports, music, and art. Participated in community service activities and volunteered in various projects. Developed leadership skills and gained valuable experience in teamwork and collaboration. Graduated with a high school diploma and a certificate of merit.'
     }
   ];
 

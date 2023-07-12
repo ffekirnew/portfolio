@@ -8,8 +8,7 @@
     color: $clr--primary;
     
     border: $bw--thin solid $clr--secondary;
-    // border-radius: 10% / 50%;
-    border-radius: $br--small;
+    border-radius: 10% / 50%;
 
     cursor: pointer;
     transition: all 0.3s ease-in-out;

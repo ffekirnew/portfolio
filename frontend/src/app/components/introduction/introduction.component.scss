@@ -51,11 +51,15 @@
                 align-items: center;
                 justify-items: right;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
                 .text {
                     letter-spacing: 4px;
                     text-transform: uppercase;
                     font-family: $ff--mono;
-                    font-size: $fs--large;
+                    font-size: $fs--medium;
                     font-weight: $fw--regular;
                     fill: $clr--primary;
                     // text-shadow: 2px 0px #ccc;
@@ -74,10 +78,15 @@
                     }
                 }
 
+                a:hover {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
                 img {
                     position: relative;
-                    right: 4.5rem;
-                    top: 7.8rem;
+                    right: 4.7rem;
+                    top: 7.9rem;
                 }
             }
         }

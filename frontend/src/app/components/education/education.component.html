@@ -7,7 +7,7 @@
     <p>This section showcases my academic journey, highlighting my qualifications, degrees, courses, and educational accomplishments to provide a comprehensive overview of my scholastic background and expertise.</p>
   </div>
   <div *ngIf="!loading" class="education__educations">
-    <div class="education__educations__education" *ngFor="let education of educations">
+    <div class="education__educations__education" *ngFor="let education of educations" [class]="education.current ? 'current' : 'past' ">
       <div class="education__educations__education__date">
         <span>{{ education.start.month }} {{ education.start.year }} - </span>
         <span *ngIf="!education.current">{{ education.end.month }} {{ education.end.year }}</span>

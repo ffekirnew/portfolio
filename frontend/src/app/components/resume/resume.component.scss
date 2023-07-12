@@ -56,13 +56,14 @@
                     display: flex;
                     align-self: baseline;
                     border: $bw--thick solid $clr-accent--primary;
+                    background: $clr--primary;
                     border-radius: 50%;
                     width: 1rem;
                     height: 1rem;
                 }
 
                 .current {
-                    background: $clr-accent--secondary;
+                    background: $clr-accent--primary;
                 }
 
                 .past {
@@ -78,7 +79,7 @@
             &__content {
                 width: 90%;
                 margin-left: 2rem;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 font-family: $ff--primary;
 
                 &:hover {
@@ -90,7 +91,7 @@
                 &__date {
                     font-size: $fs--small;
                     font-weight: $fw--regular;
-                    color: $clr--secondary;
+                    color: $clr-accent--primary;
                     padding-bottom: 1rem;
                 }
 
@@ -110,7 +111,7 @@
                 &__type {
                     font-size: $fs--medium;
                     font-weight: $fw--regular;
-                    color: $clr--secondary;
+                    color: $clr--primary;
                 }
 
                 &__location {

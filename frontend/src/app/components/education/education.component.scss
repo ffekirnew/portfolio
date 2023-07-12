@@ -42,6 +42,10 @@
         flex-direction: column;
         justify-content: center;
 
+        .current {
+
+        }
+
         &__education {
             // margin-left: 2rem;
             margin-bottom: 1rem;
@@ -65,7 +69,7 @@
 
             &__title {
                 font-size: $fs--large;
-                font-weight: $fw--semi-bold;
+                font-weight: $fw--regular;
                 color: $clr--primary;
             }
 

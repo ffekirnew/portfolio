@@ -68,7 +68,9 @@
 
 
             &__link {
-                padding: 1rem 1rem;
+                // padding: 1rem 1rem;
+                width: 90%;
+                aspect-ratio: 1 / 1;
 
                 display: flex;
                 flex-direction: column;
@@ -78,19 +80,25 @@
                 text-decoration: none;
                 color: $clr--primary;
 
-                border-radius: 10%;
-
-                &active {
-                    color: $clr-accent--secondary;
-                    background: $clr-background--secondary;
-                }
+                // border-radius: 10%;
+                border-radius: 50%;
 
                 &:hover {
                     cursor: pointer;
                     background: $clr-background--primary;
+                }
+                
+                a {
+                    width: 45%;
+                    color: $clr--primary;
 
-                    &__icon {
-                        color: $clr-accent--primary;
+                    img {
+                        width: 100%;
+                        color: $clr--primary;
+
+                        svg path {
+                            fill: $clr--primary;
+                        }
                     }
                 }
             }

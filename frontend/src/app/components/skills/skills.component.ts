@@ -8,7 +8,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 })
 export class SkillsComponent {
   public icon = faStar;
-  public devIconsFolder: string = "assets/mydevicons/";
+  public devIconsFolder: string = "assets/icons/devicons/";
   public skills: any = [
     { image: `${this.devIconsFolder}python/python-original.svg`, name: 'Python', },
     { image: `${this.devIconsFolder}django/django-plain.svg`, name: 'django', },

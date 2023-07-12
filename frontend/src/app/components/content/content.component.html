@@ -37,7 +37,7 @@
         <div class="content-container__navigation__navigation-sidebar">
             <div (click)="scrollToSection(link.sectionRef)" class="content-container__navigation__navigation-sidebar__link" *ngFor="let link of links">
                 <a routerLinkActive="active">
-                    <fa-icon class="content-container__navigation__navigation-sidebar__link__icon" [icon]="link.icon"></fa-icon>
+                    <img class="content-container__navigation__navigation-sidebar__link__icon" src="{{ link.icon }} ">
                 </a>
             </div>
         </div>
