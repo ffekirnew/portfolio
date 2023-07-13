@@ -1,21 +1,38 @@
 <div class="info-card">
-    <div class="spacing"></div>
-    <div class="info-card__header">
-        <app-header></app-header>
-    </div>
-    <div class="spacing"></div>
-    <div class="info-card__image">
-        <img src="assets/images/close-up-cropped-4x3.jpg" alt="profile">
-    </div>
-    <div class="spacing"></div>
-    <div class="info-card__bio">
-        <p>Software Engineer | Back-end heavy web developer | SWE @AAU'25</p>
-    </div>
-    <div class="spacing"></div>
-    <div class="info-card__links">
-        <app-links></app-links>
-    </div>
-    <div class="info-card__button">
-        <app-button [content]="'Hire Me!'"></app-button>
-    </div>
+  <div class="spacing"></div>
+  <div class="info-card__header">
+    <app-header></app-header>
+  </div>
+  <div class="spacing"></div>
+  <div class="info-card__image">
+    <img src="assets/images/close-up-cropped-4x3.jpg" alt="profile" />
+  </div>
+  <div class="spacing"></div>
+  <div class="info-card__bio">
+    <p>Software Engineer | Back-end heavy web developer | SWE @AAU'25</p>
+  </div>
+  <div class="spacing"></div>
+  <div class="info-card__links">
+    <app-links></app-links>
+  </div>
+  <a
+  *ngIf="!isRouteActive"
+  (click)="updateRouteActiveState()"
+    [routerLink]="'contact'"
+    class="info-card__button"
+  >
+    <app-button
+      [content]="'Let\'s Talk!'"
+    ></app-button>
+  </a>
+  <a
+  *ngIf="isRouteActive"
+  (click)="updateRouteActiveState()"
+    [routerLink]="'home'"
+    class="info-card__button"
+  >
+    <app-button
+      [content]="'Go Back'"
+    ></app-button>
+  </a>
 </div>

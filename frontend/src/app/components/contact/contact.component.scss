@@ -1,7 +1,9 @@
 @import "src/styles.scss";
 
 .contact {
-    width: 100%;
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
 
     &__chip {
         margin: 1rem 0;
@@ -46,7 +48,7 @@
             width: 100%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 2rem;
             justify-content: left;
         }
 
@@ -119,6 +121,7 @@
 
         .form-button {
             width: 25%;
+            margin: 0 auto;
             background: transparent;
             border: none;
             outline: none;
