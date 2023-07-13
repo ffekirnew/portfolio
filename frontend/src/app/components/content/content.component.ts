@@ -21,7 +21,7 @@ export class ContentComponent {
     // { name: 'Specializations', sectionRef: undefined, icon: `${this.iconsDirectory}` },
     { name: 'Skills', sectionRef: undefined, icon: `${this.iconsDirectory}/toolbox.svg` },
     { name: 'Projects', sectionRef: undefined, icon: `${this.iconsDirectory}/linear.svg` },
-    { name: 'Contact', sectionRef: undefined, icon: `${this.iconsDirectory}/clipboard.svg` },
+    // { name: 'Contact', sectionRef: undefined, icon: `${this.iconsDirectory}/clipboard.svg` },
   ];
 
   ngAfterViewInit() {

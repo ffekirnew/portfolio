@@ -6,9 +6,9 @@ import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
     // Redirect to home
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: '', redirectTo: 'about', pathMatch: 'full'},
     {path: '', component: HomePageComponent, children: [
-        {path: 'home', component: ContentComponent},
+        {path: 'about', component: ContentComponent},
         {path: 'contact', component: ContactComponent}
     ]},
 ];
