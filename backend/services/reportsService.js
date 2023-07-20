@@ -1,5 +1,6 @@
 const Report = require("../models/Report");
 
+
 exports.getAllReports = async () => {
     try {
         const reports =  await Report.find();
