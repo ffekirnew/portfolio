@@ -1,5 +1,6 @@
 const reportsService = require('../services/reportsService');
 
+
 exports.getAllReports = async (req, res) => {
     try {
         const reports = await reportsService.getAllReports();
