@@ -13,7 +13,17 @@ import { ProjectService } from 'src/app/shared/services/project.service';
 export class ProjectsComponent {
   public icon = faBuilding;
   public loading: boolean = false;
-  public projects: Project[] = [];
+  public projects: Project[] = [
+    // {
+    //   name: "Game Hub",
+    //   slug: "game-hub",
+    //   description: "I worked on this project to practice my react skills.",
+    //   status: "active",
+    //   createdAt: new Date(),
+    //   technologies: [{ name: "React" }, { name: "Zod" }],
+    //   image: "null"
+    // }
+  ];
 
   constructor(
     private projectService: ProjectService
