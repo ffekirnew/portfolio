@@ -1,5 +1,21 @@
 @import "src/styles.scss";
 
+@media only screen and (max-width: 1024px) {
+  .content-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__navigation {
+      display: none;
+    }
+
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
 .content-container {
     display: flex;
     flex-direction: row;
@@ -87,7 +103,7 @@
                     cursor: pointer;
                     background: $clr-background--primary;
                 }
-                
+
                 a {
                     width: 45%;
                     color: $clr--primary;

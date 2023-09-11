@@ -1,0 +1,106 @@
+@import "src/styles.scss";
+
+// Colors
+$clr--primary: #fcfcfc;
+$clr--secondary: #95959a;
+$clr-background--primary: #1f1f21;
+$clr-background--secondary: #19191b;
+$clr-background--dark: #121216;
+$clr-accent--primary: #2ae98b;
+$clr-accent--lighter: #2aff8f;
+$clr-accent--secondary: #238f5b;
+$clr--dark: $clr-background--primary;
+
+// Fonts
+$ff--primary: 'Poppins', sans-serif;
+$ff--secondary: 'Lora', serif;
+$ff--mono: 'Fira Code', monospace;
+
+// Font Weights
+$fw--regular: 400;
+$fw--semi-bold: 600;
+$fw--bold: 700;
+
+// Font Sizes
+$fs--extra-small: 0.8rem;
+$fs--small: 1rem;
+$fs--medium: 1.3rem;
+$fs--large: 2rem;
+$fs--extra-large: 2.7rem;
+$fs--extra-extra-large: 3.7rem;
+
+// Line Heights
+$lh--small: 1.2rem;
+$lh--medium: 1.7rem;
+$lh--large: 2rem;
+
+// Border Width
+$bw--thinnest: 0.5px;
+$bw--thin: 1px;
+$bw--thick: 2px;
+
+// Border Radius
+$br--wide: 20px;
+$br--small: 10px;
+
+
+.project-page {
+  background: $clr-background--primary;
+  color: $clr--primary;
+
+  font-family: $ff--primary;
+  height: 100vh;
+  padding: 2% 5%;
+
+
+  &__header {
+    border-radius: $br--small;
+    overflow: none;
+    padding: 1rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background: $clr-accent--primary;
+    color: $clr--dark;
+
+
+    &__navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+      }
+
+      &__list {
+        display: flex;
+
+        &__options {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+
+  &__body {
+    padding: 2rem 1rem;
+    background: $clr--secondary;
+    color: $clr-accent--primary;
+  }
+
+  &__footer {
+    background: $clr-background--secondary;
+    border: $bw--thinnest solid $clr--secondary;
+    padding: 2rem;
+    color: $clr--primary;
+    text-align: center;
+  }
+}

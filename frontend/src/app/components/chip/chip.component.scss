@@ -6,13 +6,13 @@
 
     background-color: $clr-background--primary;
     color: $clr--primary;
-    
+
     border: $bw--thin solid $clr--secondary;
-    border-radius: 10% / 50%;
+    border-radius: $br--small;
 
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    
+
     &:hover {
         background-color: $clr-background--secondary
     }
@@ -22,7 +22,7 @@
         font-size: $fs--small;
         text-align: center;
     }
-    
+
     span {
         padding: 0 5px;
         font-family: $ff--mono;

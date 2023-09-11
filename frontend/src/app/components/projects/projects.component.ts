@@ -13,16 +13,51 @@ import { ProjectService } from 'src/app/shared/services/project.service';
 export class ProjectsComponent {
   public icon = faBuilding;
   public loading: boolean = false;
-  public projects: Project[] = [
-    // {
-    //   name: "Game Hub",
-    //   slug: "game-hub",
-    //   description: "I worked on this project to practice my react skills.",
-    //   status: "active",
-    //   createdAt: new Date(),
-    //   technologies: [{ name: "React" }, { name: "Zod" }],
-    //   image: "null"
-    // }
+  public projects: Project[] = [];
+  public dummyProjects: Project[] = [
+    {
+      name: "X Games",
+      slug: "x-games",
+      description: "X Games let's you find the best games from a countless list of awesome games released over the years.",
+      status: "active",
+      createdAt: new Date(),
+      technologies: [{ name: "React" }, { name: "Zod" }, { name: "React Query" }],
+      image: "../../../assets/projects/xGames.png",
+      link: "https://game-hub.fikernew-birhanu.me"
+    },
+    {
+      name: "ThoughtTrail AI",
+      slug: "thoughttrial-ai",
+      description: "Your AI-based second brain. Get advantage by using an AI tool specifically designed to help you achieve more! ThoughtTrail will follow your thoughts and give you insights to help you achieve that next level.",
+      status: "active",
+      createdAt: new Date(),
+      technologies: [{ name: "React" }, { name: "MongoDb" }, { name: "Express.js" }, { name: "Zod" }, { name: "React Query" }],
+      image: "../../../assets/projects/thoughtTrial.png",
+      link: "https://thoughttrial.fikernew-birhanu.me"
+
+    },
+    {
+      name: "Portfolio Site",
+      slug: "portfolio-site",
+      description: "This website displays my academic, professional and personal projects.",
+      status: "active",
+      createdAt: new Date(),
+      technologies: [{ name: "Angular" }, { name: "MongoDb" }, { name: "Express.js" }],
+      image: "../../../assets/projects/portfolioSite.png",
+      link: "https://fikernew-birhanu.me"
+
+    },
+    {
+      name: "Limitless AI",
+      slug: "limitless",
+      description: "I worked on this project with a group of colleagues for a hackathon.",
+      status: "active",
+      createdAt: new Date(),
+      technologies: [{ name: "Angular" }, { name: "MongoDb" }, { name: "Express.js" }],
+      image: "../../../assets/projects/limitless.png",
+      link: "https://data-nest-3ei5.vercel.app/"
+
+    },
   ];
 
   constructor(
@@ -33,6 +68,7 @@ export class ProjectsComponent {
     this.loading = true;
     this.projectService.getAllProjects().subscribe((projects: any) => {
       this.projects = projects.projects;
+      this.projects = this.dummyProjects;
       this.loading = false;
     });
   }

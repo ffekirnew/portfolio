@@ -1,5 +1,17 @@
 @import "src/styles.scss";
 
+@media only screen and (max-width: 768px) {
+  .home-page {
+    &__info-card {
+      display: none;
+    }
+
+    &__main-content {
+      width: 100%;
+    }
+  }
+}
+
 .home-page {
   background: $clr-background--primary;
   color: $clr--primary;
@@ -20,7 +32,7 @@
   &__main-content {
     width: 70%;
     padding-top: 1rem;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   &__navigation-sidebar {

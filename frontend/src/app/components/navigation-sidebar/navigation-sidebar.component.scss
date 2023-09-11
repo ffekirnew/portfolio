@@ -1,5 +1,11 @@
 @import "src/styles.scss";
 
+@media only screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
+
 .navigation {
   width: 100%;
 
@@ -18,40 +24,40 @@
     height: 100%;
 
     background: $clr-background--secondary;
-  
+
     padding: 0.5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
+
     // Draw an oval border
     border: $bw--thinnest solid $clr--secondary;
     border-radius: 50% / 10%;
-  
-  
+
+
     &__link {
       padding: 1rem 1.5rem;
-  
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-  
+
       text-decoration: none;
       color: $clr--primary;
-  
+
       border-radius: 10%;
-  
+
       &active {
         color: $clr-accent--secondary;
         background: $clr-background--secondary;
       }
-  
+
       &__icon {
         color: $clr--primary;
         font-size: $fs--small;
-  
+
         &:hover {
           color: $clr-accent--primary;
         }

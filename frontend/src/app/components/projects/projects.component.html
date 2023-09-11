@@ -15,14 +15,14 @@
             <div class="projects__list__project__description">
                 {{ project.description }}
             </div>
-            <div class="projects__list__project__technologies">
+            <ul class="projects__list__project__technologies">
                 Technologies:
-                <div *ngFor="let tech of project.technologies" class="projects__list__project__technologies__tech">
-                    {{ tech.name }},
-                </div>
-            </div>
-            <a routerLink="/projects/{{project.slug}}" class="projects__list__project__button">
-                <app-button [content]="'Read More'"></app-button>
+                <li *ngFor="let tech of project.technologies" class="projects__list__project__technologies__tech">
+                    {{ tech.name }}
+                </li>
+            </ul>
+      <a href="{{project.link}}" class="projects__list__project__button">
+                <app-button [content]="'Check it Out.'"></app-button>
             </a>
         </div>
     </div>

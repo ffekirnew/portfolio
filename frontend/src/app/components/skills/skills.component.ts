@@ -42,5 +42,7 @@ export class SkillsComponent {
     { image: `${this.devIconsFolder}github/github-original.svg`, name: 'Github' },
     { image: `${this.devIconsFolder}bash/bash-original.svg`, name: 'bash' },
     { image: `${this.devIconsFolder}linux/linux-original.svg`, name: 'linux' },
+    { image: `${this.devIconsFolder}dot-net/dot-net-original.svg`, name: 'dotnet' },
+    { image: `${this.devIconsFolder}react/react-original.svg`, name: 'react' }
   ];
 }

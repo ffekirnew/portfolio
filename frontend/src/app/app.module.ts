@@ -28,6 +28,7 @@ import { ExperienceService } from './shared/services/experience.service';
 import { ProjectService } from './shared/services/project.service';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
 import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
+import { ProjectPageComponent } from './pages/project/project-page/project-page.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
     LoadingRipplesComponent,
     TruncatePipe,
     CapitalizePipe,
+    ProjectPageComponent,
   ],
   imports: [
     BrowserModule,

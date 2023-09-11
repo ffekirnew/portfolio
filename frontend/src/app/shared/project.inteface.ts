@@ -10,4 +10,5 @@ export interface Project {
   createdAt?: Date;
   technologies?: Technology[];
   image?: string;
+  link?: string;
 }
