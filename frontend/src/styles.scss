@@ -1,4 +1,9 @@
-// @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Lora:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Lora:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 7vmax;
+}
 
 // Colors
 $clr--primary: #fcfcfc;
@@ -10,6 +15,18 @@ $clr-accent--primary: #2ae98b;
 $clr-accent--lighter: #2aff8f;
 $clr-accent--secondary: #238f5b;
 $clr--dark: $clr-background--primary;
+
+// Lightmode Colors
+// $clr--primary: #1f1f21;
+// $clr--secondary: #19191b;
+// $clr-background--primary: #fcfcfc;
+// $clr-background--secondary: #95959a;
+// $clr-background--dark: #fcfcfc; /* You can adjust this if needed */
+// $clr-accent--primary: #238f5b;
+// $clr-accent--lighter: #2ae98b;
+// $clr-accent--secondary: #2aff8f;
+// $clr--dark: $clr-background--primary; /* You can adjust this if needed */
+
 
 // Fonts
 $ff--primary: 'Poppins', sans-serif;
@@ -181,3 +198,5 @@ hr {
 input, select {
   vertical-align:middle;
 }
+
+

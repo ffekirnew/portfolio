@@ -7,15 +7,19 @@
     justify-content: center;
     align-items: center;
 
-    border: $bw--thin solid transparent;
-    // I want the border to be like a pill shape on top and bottom
+    border: $bw--thin solid $clr--dark;
     border-radius: $br--wide;
 
-    background: $clr-background--secondary;
+    background: rgba(189, 189, 189, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+
     // Add a shadow
     box-shadow: 0 0 0.5rem $clr--dark;
 
     &:hover {
+        background: rgba(189, 189, 189, 0.15);
         cursor: pointer;
         border: $bw--thin solid $clr-accent--primary;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -40,4 +44,29 @@
         // Capitalize the first letter of each word
         text-transform: capitalize;
     }
+}
+
+.individual-skill::after {
+  content: attr(skill-title);
+  position: absolute;
+  padding: 10px 16px;
+  white-space: nowrap;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border-radius: 7px;
+  font-weight: 500;
+  opacity: 0;
+  font-family: $ff--mono;
+}
+
+.individual-skill:hover::after {
+  opacity: 0.8;
+  transition: opacity 0.15s ease 0.15s;
+  visibility: visible;
+}
+
+.individual-skill:hover {
+  z-index: 9;
+  overflow: inherit;
 }

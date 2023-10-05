@@ -70,7 +70,10 @@
         &__navigation-sidebar {
             width: 70%;
 
-            background: $clr-background--secondary;
+            background: rgba(189, 189, 189, 0.02);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.8px);
+            -webkit-backdrop-filter: blur(3.8px);
 
             padding: 0.5rem 0;
             display: flex;
@@ -80,7 +83,7 @@
 
             // Draw an oval border
             border: $bw--thinnest solid $clr--secondary;
-            border-radius: 50% / 10%;
+            border-radius: $br--wide;
 
 
             &__link {
@@ -97,11 +100,34 @@
                 color: $clr--primary;
 
                 // border-radius: 10%;
-                border-radius: 50%;
+                border-radius: $br--small;
 
                 &:hover {
-                    cursor: pointer;
-                    background: $clr-background--primary;
+                  cursor: pointer;
+                  background: $clr-background--primary;
+                  z-index: 9;
+                  overflow: inherit;
+                }
+
+                &::after {
+                  content: attr(link-title);
+                  position: absolute;
+                  padding: 10px 16px;
+                  left: -100px;
+                  white-space: nowrap;
+                  font-size: 16px;
+                  background-color: #333;
+                  color: white;
+                  border-radius: 7px;
+                  font-weight: 500;
+                  opacity: 0;
+                  font-family: $ff--mono;
+                }
+
+                &:hover::after {
+                  opacity: 0.8;
+                  transition: opacity 0.1s ease 0.5s;
+                  visibility: visible;
                 }
 
                 a {

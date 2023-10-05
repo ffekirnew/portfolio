@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faUser, faFile, faUserGraduate, faStar, faPersonSkiing, faBuilding, faContactBook } from '@fortawesome/free-solid-svg-icons';
 
 interface Link {
   name: string;

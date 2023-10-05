@@ -55,7 +55,10 @@
         &__project {
             margin-bottom: 1rem;
             padding-bottom: 1rem;
-            background: $clr-background--dark;
+            background: rgba(189, 189, 189, 0.02);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.8px);
+            -webkit-backdrop-filter: blur(3.8px);
 
             width: 100%;
             display: flex;
@@ -89,7 +92,10 @@
                 font-size: $fs--medium;
                 font-weight: $fw--regular;
                 color: $clr--secondary;
-
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
                 padding: 0.5rem 1rem;
             }
 
@@ -104,15 +110,15 @@
                 gap: 0.5rem;
                 align-items: center;
 
-                padding: 0.5rem 1rem;
+                padding: 0 1rem;
 
                 &__tech {
+                  font-size: $fs--small;
                   color: $clr-background--dark;
                   display: inline-block;
-                  border: $bw--thin solid $clr-accent--secondary;
                   border-radius: $br--small;
                   padding: 0.2rem 0.5rem;
-                  background: $clr-accent--secondary;
+                  background: $clr--secondary;
                 }
             }
 

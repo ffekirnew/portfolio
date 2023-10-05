@@ -4,10 +4,11 @@
             <app-introduction></app-introduction>
         </div>
         <div class="spacing"></div>
+        <div class="spacing"></div>
         <div id="resume" class="content-container__content__resume">
             <app-resume></app-resume>
         </div>
-        
+
         <div class="spacing"></div>
         <div id="education" class="content-container__content__education">
             <app-education></app-education>
@@ -17,17 +18,17 @@
         <div id="specializations" class="content-container__content__specializations">
             <app-specializations></app-specializations>
         </div> -->
-        
+
         <div class="spacing"></div>
         <div id="skills" class="content-container__content__skills">
             <app-skills></app-skills>
         </div>
-        
+
         <div class="spacing"></div>
         <div id="projects" class="content-container__content__projects">
             <app-projects></app-projects>
         </div>
-        
+
         <!-- <div class="spacing"></div> -->
         <!-- <div id="contact" class="content-container__content__contact">
             <app-contact></app-contact>
@@ -35,7 +36,7 @@
     </div>
     <div class="content-container__navigation">
         <div class="content-container__navigation__navigation-sidebar">
-            <div (click)="scrollToSection(link.sectionRef)" class="content-container__navigation__navigation-sidebar__link" *ngFor="let link of links">
+            <div (click)="scrollToSection(link.sectionRef)" class="content-container__navigation__navigation-sidebar__link" *ngFor="let link of links" [attr.link-title]=link.name>
                 <a routerLinkActive="active">
                     <img class="content-container__navigation__navigation-sidebar__link__icon" src="{{ link.icon }} ">
                 </a>
