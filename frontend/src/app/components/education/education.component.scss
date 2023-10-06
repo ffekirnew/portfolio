@@ -54,14 +54,10 @@
             border: $bw--thin solid $clr--secondary;
             border-radius: $br--small;
             transition: all 0.2s ease-in-out;
-            background: rgba(189, 189, 189, 0.15);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(3.8px);
-            -webkit-backdrop-filter: blur(3.8px);
 
             &:hover {
               border: $bw--thin solid $clr-accent--secondary;
-               background: rgba(189, 189, 189, 0.25);
+              background: rgba(189, 189, 189, 0.25);
             }
 
             &__date {

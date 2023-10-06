@@ -60,6 +60,20 @@ $bw--thick: 2px;
 $br--wide: 20px;
 $br--small: 10px;
 
+.glassmorphism-light {
+  background: rgba(189, 189, 189, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+}
+
+.glassmorphism-hard {
+  background: rgba(189, 189, 189, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+}
+
 
 // Scrollbars
 ::-webkit-scrollbar {

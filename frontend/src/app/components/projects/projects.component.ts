@@ -65,12 +65,7 @@ export class ProjectsComponent {
   ) { }
 
   ngOnInit() {
-    this.loading = true;
-    this.projectService.getAllProjects().subscribe((projects: any) => {
-      this.projects = projects.projects;
-      this.projects = this.dummyProjects;
-      this.loading = false;
-    });
+    this.projects = this.dummyProjects;
   }
 
   getTechnologiesFormatted(technology: Technology): void {

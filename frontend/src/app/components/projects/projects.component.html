@@ -7,7 +7,7 @@
         <p>This section showcases a collection of my notable projects, demonstrating my skills, creativity, and problem-solving abilities. It offers a glimpse into my hands-on experience and serves as a portfolio highlighting my accomplishments in various domains.</p>
     </div>
     <div *ngIf="!loading" class="projects__list">
-        <div *ngFor="let project of projects" class="projects__list__project">
+        <div *ngFor="let project of projects" class="projects__list__project glassmorphism-light">
             <img class="projects__list__project__image" src="{{ project.image }}">
             <div class="projects__list__project__title">
                 {{ project.name }}

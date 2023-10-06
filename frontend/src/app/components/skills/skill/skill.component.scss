@@ -10,11 +10,6 @@
     border: $bw--thin solid $clr--dark;
     border-radius: $br--wide;
 
-    background: rgba(189, 189, 189, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.8px);
-    -webkit-backdrop-filter: blur(3.8px);
-
     // Add a shadow
     box-shadow: 0 0 0.5rem $clr--dark;
 
@@ -52,12 +47,13 @@
   padding: 10px 16px;
   white-space: nowrap;
   font-size: 16px;
-  background-color: #333;
+  // background-color: #333;
   color: white;
-  border-radius: 7px;
+  // border-radius: 7px;
   font-weight: 500;
   opacity: 0;
-  font-family: $ff--mono;
+  font-family: $ff--primary;
+  bottom: -10px;
 }
 
 .individual-skill:hover::after {
