@@ -10,9 +10,6 @@
     border: $bw--thin solid $clr--dark;
     border-radius: $br--wide;
 
-    // Add a shadow
-    box-shadow: 0 0 0.5rem $clr--dark;
-
     &:hover {
         background: rgba(189, 189, 189, 0.15);
         cursor: pointer;
@@ -47,22 +44,22 @@
   padding: 10px 16px;
   white-space: nowrap;
   font-size: 16px;
-  // background-color: #333;
+  background-color: #333;
   color: white;
-  // border-radius: 7px;
+  border-radius: 7px;
   font-weight: 500;
   opacity: 0;
   font-family: $ff--primary;
-  bottom: -10px;
+  bottom: -15px;
 }
 
 .individual-skill:hover::after {
-  opacity: 0.8;
-  transition: opacity 0.15s ease 0.15s;
+  opacity: 1;
+  transition: opacity 0.2s ease 0.2s;
   visibility: visible;
 }
 
 .individual-skill:hover {
-  z-index: 9;
+  z-index: 999;
   overflow: inherit;
 }
